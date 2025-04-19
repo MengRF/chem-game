@@ -1,3 +1,4 @@
+/* 页面背景与通用字体 */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -5,12 +6,15 @@ body {
   background-color: #EAE6F7;
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #6C47FF;
+/* 欢迎语、计时器 */
+#welcome, #timer {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
 }
 
+/* 题目区 */
 #question {
   font-size: 32px;
   font-weight: bold;
@@ -18,12 +22,28 @@ h1 {
   margin-bottom: 20px;
 }
 
-#timer {
-  font-size: 18px;
+/* 答案显示区 */
+#answer {
   font-weight: bold;
-  color: #444;
+  font-size: 20px;
+  color: #333;
 }
 
+/* 反馈信息（正确/错误） */
+#feedback {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #6C47FF;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.5;
+}
+
+/* 按钮容器：周期表网格 */
 #buttons {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
@@ -33,6 +53,7 @@ h1 {
   justify-items: center;
 }
 
+/* 元素、数字、括号统一圆形按钮 */
 #buttons button {
   width: 45px;
   height: 45px;
@@ -51,11 +72,13 @@ h1 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
+/* 鼠标悬停效果 */
 #buttons button:hover {
   background-color: #7B61FF;
   transform: scale(1.05);
 }
 
+/* 空位用不可见按钮占格子 */
 .empty-button {
   visibility: hidden;
   pointer-events: none;
@@ -63,27 +86,13 @@ h1 {
   border: none;
 }
 
-#answer {
-  font-weight: bold;
-  font-size: 20px;
-  color: #333;
-}
-
-#feedback {
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #6C47FF;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  word-wrap: break-word;
-  white-space: normal;
-  line-height: 1.5;
-}
-
+/* 提交、清空、导出、错题再测、重置、清榜按钮 */
 #submit,
-#clear {
+#clear,
+#exportPdfBtn,
+#retryWrongBtn,
+#restartBtn,
+#clearBoardBtn {
   margin: 8px;
   padding: 10px 20px;
   font-size: 16px;
@@ -95,7 +104,36 @@ h1 {
   transition: background-color 0.3s;
 }
 
+/* 功能按钮悬停样式 */
 #submit:hover,
-#clear:hover {
+#clear:hover,
+#exportPdfBtn:hover,
+#retryWrongBtn:hover,
+#restartBtn:hover,
+#clearBoardBtn:hover {
   background-color: #7B61FF;
 }
+
+/* 排行榜区 */
+#leaderboard {
+  margin-top: 30px;
+}
+#leaderboard ol {
+  list-style-type: decimal;
+  padding-left: 0;
+}
+
+/* 成绩报告样式 */
+#report {
+  margin-top: 30px;
+}
+#report ul {
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+  padding-left: 0;
+}
+#report li {
+  margin-bottom: 6px;
+}
+
