@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Chemical Formula Game</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-  <h1>Chemical Formula Game</h1>
+  <!-- 可选标题 -->
+  <!-- <h1>Chemical Formula Game</h1> -->
+
   <p id="welcome"></p>
   <p id="timer">Time left: 180s</p>
   <p id="question">Question will appear here</p>
@@ -21,6 +23,29 @@
   </div>
 
   <p id="feedback"></p>
+
+  <!-- Leaderboard 排行榜 -->
+  <div id="leaderboard" style="display:none;">
+    <h2>🏆 Leaderboard</h2>
+    <ol id="rankingList"></ol>
+  </div>
+
+  <!-- Final Report 成绩报告 -->
+  <div id="report" style="display:none;">
+    <h2>📊 Final Report</h2>
+    <p id="summary"></p>
+    <h3>✅ Correct Answers</h3>
+    <ul id="correctList"></ul>
+    <h3>❌ Incorrect Answers</h3>
+    <ul id="incorrectList"></ul>
+  </div>
+
+  <!-- 功能按钮 -->
+  <button id="exportPdfBtn" style="display:none;">📄 Export as PDF</button>
+  <button id="retryWrongBtn" style="display:none;">🔁 Retry Wrong Questions</button>
+  <button id="restartBtn" style="display:none;">🔄 Restart Game</button>
+  <button id="clearBoardBtn" style="display:none;">🗑 Clear Leaderboard</button>
+
 
   <script src="script.js"></script>
 </body>
